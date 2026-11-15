@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.0",
+  "status": "member_b_analysis_complete",
+  "protocol_version": "1.0.0",
+  "run_sha256": "04d2f3dee1b64ac6e6d359b0aae75128a001a8cd25ac2f4df9afce4a389a1d50",
+  "cohort": "common",
+  "noise_seed": 0,
+  "n_reference": 90120,
+  "n_common": 71941,
+  "n_common_users": 48,
+  "representative_conditions": [
+    "ds0_n0",
+    "ds10_n0",
+    "ds0_n20",
+    "ds10_n20"
+  ],
+  "feature_groups_version": "v1.0.0",
+  "permutation_repeats": 10,
+  "permutation_seed": 20261112,
+  "source_package_manifest_sha256": "64786ac29b1a9328c87bca645d90019471327014e1289e9f2abdb41743692d76",
+  "source_handoff_path": "现实关联/outputs/member_a_handoff.json",
+  "source_handoff_sha256": "4f9af005c22936737358d55355b059c1b68965bd65b0b84d3b5ca74b77b2d39b",
+  "source_detail_manifests": [],
+  "model_hash_location": "permutation_provenance.fold_rf_sha256",
+  "source_drift_input_hash_location": "drift_provenance.input_sha256",
+  "outputs": [
+    {
+      "path": "member_b/outputs/feature_drift_by_feature.csv",
+      "sha256": "5c4ecde03cea7f8328639366c3425b28e3446626f22eba3574977dc789ad1624",
+      "bytes": 8602
+    },
+    {
+      "path": "member_b/outputs/feature_drift_by_group.csv",
+      "sha256": "4a495082083eb0a8d2af429a100cd115a08f7dc11bc12cbc7888f5ba35f8802e",
+      "bytes": 3831
+    },
+    {
+      "path": "member_b/outputs/feature_drift_by_class_user.csv",
+      "sha256": "e67166fe0c5411d59efd10e78aad3eff38cf850bec77cd32183def2b66b49b8e",
+      "bytes": 140230
+    },
+    {
+      "path": "member_b/outputs/group_permutation_importance.csv",
+      "sha256": "29b406563c749153d1512d42724c53b04d97f3002e5d76eed9df90272122e9a8",
+      "bytes": 44298
+    },
+    {
+      "path": "member_b/outputs/group_permutation_summary.csv",
+      "sha256": "9d88ff0fe6506b7acf7fe1db200c947e5ece99c5d60525ec9e645fa996374689",
+      "bytes": 4417
+    },
+    {
+      "path": "member_b/outputs/member_b_interaction_from_grid.csv",
+      "sha256": "b41daa8fd026af4af659b03991487c58c935193511a860aea60ccaa7382acd84",
+      "bytes": 3361
+    },
+    {
+      "path": "member_b/outputs/literature_evidence.csv",
+      "sha256": "a9c26753085fabd2b01e99532e7e11b84a6717cf2cc74e8bfc62bf88bc99ddde",
+      "bytes": 2816
+    },
+    {
+      "path": "member_b/outputs/scenario_mapping.csv",
+      "sha256": "4571f4f9ff35e8e535ff7851fc1f3d9599c9813c95bd97c59d75295cba2f2b2c",
+      "bytes": 3770
+    },
+    {
+      "path": "member_b/run_member_b_drift.py",
+      "sha256": "1033a5353547e57751474612d70f19841797b9240f70b505d77dac1fa17b2484",
+      "bytes": 6756
+    },
+    {
+      "path": "member_b/run_member_b_permutation.py",
+      "sha256": "59043674c35cbf71a5d667daa09251b186e3896ade26a338df60bf7a1006bdcb",
+      "bytes": 7165
+    },
+    {
+      "path": "member_b/outputs/member_b_report_section.md",
+      "sha256": "65449bd187bc4b6c1fd0abf96b23dc15204426898a6c230990d19d0c81517a7c",
+      "bytes": 8909
+    }
+  ],
+  "notes": [
+    "This repository manifest embeds the original analysis provenance and hashes the packaged small outputs and adapted scripts.",
+    "Raw GPS points, reference-window arrays, per-window predictions, and model weights are excluded from GitHub.",
+    "Permutation repeats describe fixed-model shuffle variation, not user or training uncertainty."
+  ],
+  "drift_provenance": {
+    "status": "feature_drift_and_grouped_permutation_complete",
+    "run_hash": "04d2f3dee1b64ac6e6d359b0aae75128a001a8cd25ac2f4df9afce4a389a1d50",
+    "cohort": "common",
+    "noise_seed": 0,
+    "n_windows": 71941,
+    "n_users": 48,
+    "participating_users": [
+      "010",
+      "020",
+      "021",
+      "052",
+      "056",
+      "062",
+      "064",
+      "065",
+      "067",
+      "068",
+      "069",
+      "073",
+      "075",
+      "076",
+      "078",
+      "081",
+      "082",
+      "084",
+      "085",
+      "086",
+      "089",
+      "091",
+      "092",
+      "096",
+      "097",
+      "101",
+      "102",
+      "104",
+      "110",
+      "111",
+      "112",
+      "115",
+      "117",
+      "125",
+      "126",
+      "128",
+      "129",
+      "138",
+      "139",
+      "141",
+      "144",
+      "153",
+      "154",
+      "163",
+      "167",
+      "170",
+      "174",
+      "179"
+    ],
+    "feature_groups_version": "v1.0.0",
+    "feature_groups": {
+      "speed": [
+        "mean_speed",
+        "std_speed",
+        "max_speed",
+        "median_speed",
+        "q25_speed",
+        "q75_speed"
+      ],
+      "acceleration": [
+        "mean_acc",
+        "std_acc",
+        "max_acc"
+      ],
+      "heading_change": [
+        "mean_heading",
+        "sum_heading",
+        "std_heading"
+      ],
+      "distance": [
+        "path_length"
+      ],
+      "sampling_time": [
+        "duration",
+        "n_points",
+        "mean_gap"
+      ],
+      "stop_ratio": [
+        "stop_ratio"
+      ]
+    },
+    "feature_order": [
+      "duration",
+      "n_points",
+      "path_length",
+      "mean_speed",
+      "std_speed",
+      "max_speed",
+      "median_speed",
+      "q25_speed",
+      "q75_speed",
+      "mean_acc",
+      "std_acc",
+      "max_acc",
+      "mean_heading",
+      "sum_heading",
+      "std_heading",
+      "stop_ratio",
+      "mean_gap"
+    ],
+    "conditions": [
+      "ds0_n0",
+      "ds10_n0",
+      "ds0_n20",
+      "ds10_n20"
+    ],
+    "input_sha256": {
+      "现实关联\\artifacts\\reference_manifest.csv": "15577ed1360d890ff905c716a8bf500f918de75f4a24dde8ca9454948bc205b3",
+      "project\\artifacts\\member_a\\support.npz": "215f7f4139ebe0cc89f88880d6e8eba38f55d4cca9c271a0c28a4a88cfdac99b",
+      "project\\artifacts\\member_a\\windows.npz": "f3a3cd4eaf4b1dbfa94eab30aa30ab9236b91ff0838589f4c369a38a8c8e0d71",
+      "现实关联\\degradation_config.yaml": "2d92039fb60f36e945514e0eba940cdba130e311ac3c44567e96383863ae4671",
+      "project\\research\\deployment_protocol.py": "3503508c70c4e26ed487cac20de01f552d023f4e277c1b86f071d0dc2b3317a6",
+      "project\\research\\features.py": "acdc0f335060c48aac32d53db86a0cf537cf7d8fdfb6731d8393bbb9fdf26e55"
+    },
+    "nonfinite_rule": "replace NaN and +/-Infinity with 0.0 as in A's _extract",
+    "permutation_repeats_planned": 10,
+    "permutation_seed_planned": 20261112,
+    "permutation_executed": true,
+    "permutation_result_manifest": "member_b_permutation_manifest.json",
+    "permutation_detail_rows": 240,
+    "permutation_summary_rows": 24
+  },
+  "permutation_provenance": {
+    "status": "complete",
+    "run_hash": "04d2f3dee1b64ac6e6d359b0aae75128a001a8cd25ac2f4df9afce4a389a1d50",
+    "cohort": "common",
+    "noise_seed": 0,
+    "permutation_repeats": 10,
+    "permutation_seed": 20261112,
+    "participating_users": [
+      "010",
+      "020",
+      "021",
+      "052",
+      "056",
+      "062",
+      "064",
+      "065",
+      "067",
+      "068",
+      "069",
+      "073",
+      "075",
+      "076",
+      "078",
+      "081",
+      "082",
+      "084",
+      "085",
+      "086",
+      "089",
+      "091",
+      "092",
+      "096",
+      "097",
+      "101",
+      "102",
+      "104",
+      "110",
+      "111",
+      "112",
+      "115",
+      "117",
+      "125",
+      "126",
+      "128",
+      "129",
+      "138",
+      "139",
+      "141",
+      "144",
+      "153",
+      "154",
+      "163",
+      "167",
+      "170",
+      "174",
+      "179"
+    ],
+    "feature_groups_version": "v1.0.0",
+    "feature_groups": {
+      "speed": [
+        "mean_speed",
+        "std_speed",
+        "max_speed",
+        "median_speed",
+        "q25_speed",
+        "q75_speed"
+      ],
+      "acceleration": [
+        "mean_acc",
+        "std_acc",
+        "max_acc"
+      ],
+      "heading_change": [
+        "mean_heading",
+        "sum_heading",
+        "std_heading"
+      ],
+      "distance": [
+        "path_length"
+      ],
+      "sampling_time": [
+        "duration",
+        "n_points",
+        "mean_gap"
+      ],
+      "stop_ratio": [
+        "stop_ratio"
+      ]
+    },
+    "n_windows": 71941,
+    "n_users": 48,
+    "rf_n_jobs": 1,
+    "permutation_rule": "same within-user row permutation for all columns in a group, reused across four conditions",
+    "source_package_manifest_sha256": "64786ac29b1a9328c87bca645d90019471327014e1289e9f2abdb41743692d76",
+    "fold_rf_sha256": {
+      "010": "f5e37714f0147225cdcae8e8c44e50eba03605ce4f3f1717f31fc6b22ffa9a72",
+      "020": "4dc2969b15a079cb8e0062aed7e8a41266a51a263ffaa8f582a2395fdc0d01e8",
+      "021": "48dfbbb1ff6d34a9bbef7d90dbed093328054b8d900cf6d9f70d48da49bc45b4",
+      "052": "3fb7fc704c1d095b8c0d651f303f1e0158229933d731c893a6dca98e4f30830a",
+      "056": "bb078eaa8469afb448505e4e4a157fe23f994ccba3773fc0a82d9d9a7412c8f9",
+      "062": "290851cddf9c21547b337c9d51ac543e3cd4bf087de21a2e93fecb19c4c32fe2",
+      "064": "b5c5782261d7ebf1addbacae906f41c87225a39e5764fb9ee23b925d68d98d2b",
+      "065": "5edb2a75e51d3897965122fec1ab398d9f72db0e557bfd136470a0fb8deea894",
+      "067": "415394ae17f4e4838bc11d1eea2201d05d8bc3df67ceaa21377c400b4a6b495f",
+      "068": "8d75d236c73a26a561bd8ca141bbb095e6868badece8f49f2532b0ab16edbdee",
+      "069": "2291cf79a6d50c119b5c802fdaf542f76a79d9fcca27e519e268e301a7134e40",
+      "073": "d2920452474431351dbd20fa62f4c74cf33b4c23b9f1b374b51ab2a215f640cd",
+      "075": "31bc23e8b1d56f61da232aefa99cff9ed3a150f085d1c9dce10c365209acf03a",
+      "076": "9c11eddedd8080467416c06587393d04b13e26d13400f34fe361f94013108785",
+      "078": "30f56937784a718a269fda1aef4cba5c44f796fe6e7503a394e268310b0914d3",
+      "081": "ec752ee7aaf8600101a40fa892670b8c149efdc9d5f60caef4d0dfdc0f218bc2",
+      "082": "61759d2647dad0288e0dea1c8ff1f4d074b220c4cb7e2b932f78d3b05ddaca52",
+      "084": "dd2217da689867115ae71a9860860193c478ec6214553f124e895346d3f9c7e9",
+      "085": "39b68915ab4508f95a88811c141152e2d2b379725739c0aa8d4f0f225cf62aa1",
+      "086": "1717b635d0ede4308c79ff50e5e99255bba6f0a8e0486488e261c7956a81d945",
+      "089": "e3d3d3abe16fef147d44d789b7fd62bfc0dd2017b6fba875bfdd83dda7c89c96",
+      "091": "d48dffef6f614039591e71f942886ebe348bdd0af6e92897f430a0dddc81effd",
+      "092": "919a322257e7eeeeec0f6066d5b13706f2310d42d8854e2197d64b3f4e4f95fd",
+      "096": "b19686227f2ec7c745cc36fa7db70b6e7ff8f9711ea6c9ab5365a1272eea4594",
+      "097": "0a1ad0707b8c8f4abf4979a5b4da419dbbf38400526dbc50f9a1e8fd50f872e7",
+      "101": "abf256577a2028f87839305e829eed320673f1cf3b0627d31e2e6c8ddc35fe45",
+      "102": "d7aea6daa004b2e570b41ccb78d1de68d270035b333e6f05da236373c4a450d6",
+      "104": "3c03165cb7ad984bd00ee29403c6fcc100385437d3e64614431adf61950de0ce",
+      "110": "3f7eb555e52e6b210be0dca8f869a3080d74e168578df097a7211291c0fe8cb3",
+      "111": "78f67af283b9f4799d89d6b7360c72a42b0d59ebd58b27311315ef293dffc11b",
+      "112": "43c5e84d9566e5af95c295250f38a2d188c76c583c19f0fe0ddefd7e60516629",
+      "115": "4f2a30ccb760e3a5d96d57a102ed4acf2d08498ab53f9904a2bd94d9d3929d7b",
+      "117": "e81a3686169fe81436ab1e1b0ddbcefab292f77081e4d23163d3955281d85390",
+      "125": "dc65d3da111abc7e9f1b3b16c7fff09d3565488bca4f89543a7c8b6fd8411743",
+      "126": "cd6ce44b427d6962ae201e77e176a6408f2e2ca70f7eeae99c6f8f8099de2819",
+      "128": "18731da4a1d13f10d5c5c239eb45370a838c07473c463b26255fe5d5493a7c4b",
+      "129": "30b84ed173e22d0c76cf15c1dffccf1f13ca7cb1e86c65c0eed8778e11417c7a",
+      "138": "dbdce449fae74c9cfc5aab37255c17a6ab5999d62553b10af3a1665e61af3d83",
+      "139": "d7d271fdb7793c619d267306af757ececd74e373008e5343e2866a7cff69fc14",
+      "141": "bce73a3975d081898815a4c825dc18ded44cae3e2059e9fdda0b1bbf7c80dbb9",
+      "144": "59a859822251210b019a58ccc3fc4581cda6a3e21887dc0e842e54a1e3aa337e",
+      "153": "496cb336a39c57755707d8181f080cda05cf3708d47435f58f9696f3f9ce3630",
+      "154": "53ad4d6ed0db28b6cc563b279e0719c2fb1d5b8eaa760c69d60a3fe1f57d73ec",
+      "163": "31501918f9b1778bbeb2e7f15ccdb649cac0ba895f138fc8b0724bdb635a9241",
+      "167": "8f92571886cf29e81751ff69d2fc0f182ab21412b64e01f6373711bc51e0ccc8",
+      "170": "ba09369465726b179fb71c5eec86af0c0ee7e5eeaf7e77ca380888b4bdd081a0",
+      "174": "225504333b2ba06064ca1e401d100bcac21ee09d6b9d594e0a770faf8c07d866",
+      "179": "32b6fc7b00b84a4b045070b098fcdffc4ec95925cbb3e47e8120256741f5a0f8"
+    }
+  }
+}

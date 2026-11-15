@@ -1,0 +1,340 @@
+{
+  "scope": "full_louo",
+  "all_conditions_complete": true,
+  "run_sha256": "04d2f3dee1b64ac6e6d359b0aae75128a001a8cd25ac2f4df9afce4a389a1d50",
+  "protocol_version": "1.0.0",
+  "preparation_fingerprint": "be719a48cdedcb9ee0e494c97eca85e972a3e92484cb0ed218c0ca2b8e98263c",
+  "frozen_implementation_sha256": {
+    "deployment_grid.py": "6154fb51de77943a6b22c505bdb774f00b5130c80e8ba25d35e0d4fb62b2e88f",
+    "deployment_protocol.py": "3503508c70c4e26ed487cac20de01f552d023f4e277c1b86f071d0dc2b3317a6",
+    "features.py": "acdc0f335060c48aac32d53db86a0cf537cf7d8fdfb6731d8393bbb9fdf26e55",
+    "model_seq.py": "28786e74ec3fde8b047c0d5a937431883a7441afb94cd8a40eca6c9ce79fb728",
+    "degradation.py": "61236e85d54e9def7a76b59a044edeb8712b62bc40eb901fc4272d6422aed287",
+    "segmentation.py": "06c06167122fa9e0e6b630a7648e3d7925b7ca12c2679a5ca7a869998d1ebb8b",
+    "config.py": "52bb563691bbb225b8a50c592845e7659aa8254a1f961b442451c3df194a940e",
+    "model.py": "f752ce66ac3af8c33d49141ea8cb0d37cb63d20761ac30b6c51c7025e8262064"
+  },
+  "config": {
+    "path": "现实关联/degradation_config.yaml",
+    "parsed_sha256": "2c3bb20a8353f92e40a858337860519b02843f680744880e158432e64cc36e57",
+    "file_sha256": "2d92039fb60f36e945514e0eba940cdba130e311ac3c44567e96383863ae4671"
+  },
+  "inputs": {
+    "points": {
+      "path": "project/data/processed/points.csv",
+      "sha256": "45c07605e0a4d526df07ffc716231c700d9c103a0367699b3362ce3a6db5bd74"
+    },
+    "manifest": {
+      "path": "现实关联/artifacts/reference_manifest.csv",
+      "sha256": "15577ed1360d890ff905c716a8bf500f918de75f4a24dde8ca9454948bc205b3"
+    },
+    "windows": {
+      "path": "project/artifacts/member_a/windows.npz",
+      "sha256": "f3a3cd4eaf4b1dbfa94eab30aa30ab9236b91ff0838589f4c369a38a8c8e0d71"
+    },
+    "support": {
+      "path": "project/artifacts/member_a/support.npz",
+      "sha256": "215f7f4139ebe0cc89f88880d6e8eba38f55d4cca9c271a0c28a4a88cfdac99b"
+    }
+  },
+  "source_artifacts": {
+    "grid_results": {
+      "path": "现实关联/outputs/grid_results.csv",
+      "sha256": "11fafef5733eb9b354672f814a3eaded8908622db1656365b4297ae205d29699"
+    },
+    "grid_seed_summary": {
+      "path": "现实关联/outputs/grid_seed_summary.csv",
+      "sha256": "5b591338d7fbd3c76627ba9d3f665124daa2e32cc9922dd14acbd9ad083a7f85"
+    },
+    "evaluation_summary": {
+      "path": "现实关联/outputs/evaluation_summary.json",
+      "sha256": "886315e3fbc0057a0c0bbd1a6c16bed44cd80a3196833bbc5fb150ade2272dc4"
+    },
+    "prepare_summary": {
+      "path": "现实关联/outputs/prepare_summary.json",
+      "sha256": "3624f80afe463a4b41ced3190d024fa6a35ab352dbb4016a0baa853fbf00eeff"
+    },
+    "run_manifest": {
+      "path": "project/artifacts/member_a/run_04d2f3dee1b64ac6/run_manifest.json",
+      "sha256": "62c2cc1122c03c634e06ebeebab7f744cd0a7866e7ff3307f378ff720dac6e68"
+    },
+    "job_result": {
+      "path": "project/artifacts/member_a/job_result.json",
+      "sha256": "69b3a874de9d6292118906eec23461d77af554a2a35f9c7a844916b7f40adcf5"
+    }
+  },
+  "evaluation": {
+    "method": "leave_one_user_out",
+    "n_folds": 54,
+    "users": [
+      "010",
+      "020",
+      "021",
+      "052",
+      "056",
+      "058",
+      "062",
+      "064",
+      "065",
+      "067",
+      "068",
+      "069",
+      "073",
+      "075",
+      "076",
+      "078",
+      "080",
+      "081",
+      "082",
+      "084",
+      "085",
+      "086",
+      "089",
+      "091",
+      "092",
+      "096",
+      "097",
+      "098",
+      "101",
+      "102",
+      "104",
+      "105",
+      "106",
+      "110",
+      "111",
+      "112",
+      "115",
+      "117",
+      "125",
+      "126",
+      "128",
+      "129",
+      "136",
+      "138",
+      "139",
+      "141",
+      "144",
+      "153",
+      "154",
+      "163",
+      "167",
+      "170",
+      "174",
+      "179"
+    ],
+    "n_reference": 90120,
+    "n_common": 71941,
+    "n_common_users": 48,
+    "common_users": [
+      "010",
+      "020",
+      "021",
+      "052",
+      "056",
+      "062",
+      "064",
+      "065",
+      "067",
+      "068",
+      "069",
+      "073",
+      "075",
+      "076",
+      "078",
+      "081",
+      "082",
+      "084",
+      "085",
+      "086",
+      "089",
+      "091",
+      "092",
+      "096",
+      "097",
+      "101",
+      "102",
+      "104",
+      "110",
+      "111",
+      "112",
+      "115",
+      "117",
+      "125",
+      "126",
+      "128",
+      "129",
+      "138",
+      "139",
+      "141",
+      "144",
+      "153",
+      "154",
+      "163",
+      "167",
+      "170",
+      "174",
+      "179"
+    ],
+    "reference_users_without_common_windows": [
+      "058",
+      "080",
+      "098",
+      "105",
+      "106",
+      "136"
+    ],
+    "classes": [
+      "walk",
+      "bike",
+      "bus",
+      "car",
+      "subway"
+    ],
+    "primary_cohort": "common",
+    "condition_specific_cohort": "condition",
+    "fixed_five_class_macro_f1": true,
+    "unusable_condition_metric": null
+  },
+  "grid": {
+    "main_downsample_sec": [
+      0,
+      5,
+      10
+    ],
+    "stress_downsample_sec": [
+      30
+    ],
+    "noise_sigma_m_per_axis": [
+      0,
+      5,
+      10,
+      20
+    ],
+    "main_conditions": [
+      "ds0_n0",
+      "ds0_n5",
+      "ds0_n10",
+      "ds0_n20",
+      "ds5_n0",
+      "ds5_n5",
+      "ds5_n10",
+      "ds5_n20",
+      "ds10_n0",
+      "ds10_n5",
+      "ds10_n10",
+      "ds10_n20"
+    ],
+    "stress_conditions": [
+      "ds30_n0",
+      "ds30_n5",
+      "ds30_n10",
+      "ds30_n20"
+    ],
+    "seeds": {
+      "training": 0,
+      "noise_primary": 0,
+      "noise_repeats": [
+        0,
+        1,
+        2
+      ],
+      "repeat_conditions": [
+        "ds10_n10"
+      ]
+    },
+    "degradation": {
+      "main_downsample_sec": [
+        0,
+        5,
+        10
+      ],
+      "stress_downsample_sec": [
+        30
+      ],
+      "noise_sigma_m": [
+        0,
+        5,
+        10,
+        20
+      ],
+      "downsample_method": "first_point_per_time_bucket",
+      "order": "downsample_then_noise",
+      "noise_distribution": "independent_gaussian_xy",
+      "noise_scale": "per_axis_sigma_m",
+      "pairing": "noise_seed_window_id_original_point_index"
+    },
+    "noise_repeat_scope": "noise_realizations_only_fixed_models_and_users"
+  },
+  "member_b_interface": {
+    "representative_conditions": [
+      "ds0_n0",
+      "ds10_n0",
+      "ds0_n20",
+      "ds10_n20"
+    ],
+    "recommended_comparison_cohort": "common",
+    "noise_seed": 0,
+    "n_common": 71941,
+    "protocol_module": "research.deployment_protocol",
+    "degradation_call": "degrade_window(full_clean_window, condition, noise_seed=0, window_id=persistent_window_id)",
+    "window_source": "research.deployment_grid.Windows(config); frame(index); meta.window_id is the persistent ID",
+    "fold_selection": "For a window of user U, use the held-out-U model; its training users exclude U.",
+    "model_inventory": {
+      "path": "现实关联/outputs/member_a_fold_inventory.csv",
+      "sha256": "2bdc5d4e4237f5a6cae3767a2bd3feb43ef6c2f8ea4856c3102ea9aafe6d35f2",
+      "present_at_export": true,
+      "fold_column": "test_user",
+      "rf_path_column": "rf_path",
+      "rf_hash_column": "rf_sha256",
+      "gru_path_column": "gru_path",
+      "gru_hash_column": "gru_sha256"
+    },
+    "model_paths": {
+      "rf_template": "project/artifacts/member_a/run_04d2f3dee1b64ac6/folds/{test_user}/rf.joblib",
+      "gru_template": "project/artifacts/member_a/run_04d2f3dee1b64ac6/folds/{test_user}/gru.pt",
+      "metadata_template": "project/artifacts/member_a/run_04d2f3dee1b64ac6/folds/{test_user}/models.json",
+      "rf_format": "joblib",
+      "gru_format": "torch_state_dict",
+      "gru_class": "research.model_seq.GRUNet",
+      "model_parameters": {
+        "rf": {
+          "n_estimators": 300,
+          "class_weight": "balanced"
+        },
+        "gru": {
+          "seq_len": 128,
+          "hidden": 64,
+          "epochs": 15,
+          "batch_size": 512,
+          "lr": 0.001
+        }
+      }
+    },
+    "prediction_template": "project/artifacts/member_a/run_04d2f3dee1b64ac6/folds/{test_user}/{condition}_seed{noise_seed}.csv.gz",
+    "coverage_independent_of_noise": true,
+    "interpretation": "Absolute model advantage and improvement over the clean model gap are separate quantities; permutation importance is predictive, not causal."
+  },
+  "outputs": {
+    "grid_primary_common": "现实关联/outputs/grid_primary_common.csv",
+    "grid_primary_condition": "现实关联/outputs/grid_primary_condition.csv",
+    "grid_key_seed_summary": "现实关联/outputs/grid_key_seed_summary.csv",
+    "per_class_robustness": "现实关联/outputs/per_class_robustness.csv",
+    "grid_qc_notes": "现实关联/outputs/grid_qc_notes.csv",
+    "runtime_summary": "现实关联/outputs/runtime_summary.json",
+    "member_a_handoff": "现实关联/outputs/member_a_handoff.json"
+  },
+  "frozen_run_environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "sklearn": "1.8.0",
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "torch_threads": 8,
+    "torch_interop_threads": 24,
+    "deterministic_algorithms": true,
+    "device_name": "NVIDIA GeForce RTX 5060 Laptop GPU"
+  }
+}
