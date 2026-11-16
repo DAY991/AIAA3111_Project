@@ -1,0 +1,30 @@
+{
+  "scope": "startup_evidence_not_full_results",
+  "verified_at_local": "2026-11-12T17:27:05.280977+08:00",
+  "run_sha256": "04d2f3dee1b64ac6e6d359b0aae75128a001a8cd25ac2f4df9afce4a389a1d50",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "sklearn": "1.8.0",
+    "torch": "2.11.0+cu128",
+    "device": "cuda",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "torch_threads": 8,
+    "torch_interop_threads": 24,
+    "deterministic_algorithms": true,
+    "device_name": "NVIDIA GeForce RTX 5060 Laptop GPU"
+  },
+  "first_completed_user": "010",
+  "n_training_users": 53,
+  "model_hashes_verified": {
+    "rf.joblib": "f5e37714f0147225cdcae8e8c44e50eba03605ce4f3f1717f31fc6b22ffa9a72",
+    "gru.pt": "097a55f65aa11d4b4f9b983fd397a19b0f0a1c267c2d43b1f6d882906eeede56"
+  },
+  "prediction_receipts_hash_verified": 18,
+  "rf_training_seconds": 12.553973200003384,
+  "gru_training_seconds": 35.79107249999652,
+  "full_run_expected_model_folds": 54,
+  "full_run_expected_prediction_receipts": 972
+}
