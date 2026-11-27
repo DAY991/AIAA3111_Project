@@ -1,0 +1,62 @@
+{
+  "run_sha256": "04d2f3dee1b64ac6e6d359b0aae75128a001a8cd25ac2f4df9afce4a389a1d50",
+  "job_status": "completed",
+  "started_at_utc": "2026-11-12T09:22:06.193204+00:00",
+  "finished_at_utc": "2026-11-12T11:38:17.739770+00:00",
+  "wall_seconds": 8171.546566,
+  "wall_minutes": 136.19244276666666,
+  "wall_hours": 2.269874046111111,
+  "n_folds": 54,
+  "n_saved_models": 108,
+  "run_directory": "project/artifacts/member_a/run_04d2f3dee1b64ac6",
+  "environment": {
+    "started_at_utc": "2026-11-12T09:22:07.721666+00:00",
+    "python": "3.12.14",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2",
+    "sklearn": "1.8.0",
+    "cuda_available": true,
+    "torch_cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "cublas_workspace_config": ":4096:8",
+    "forwarded_arguments": [
+      "--mode",
+      "evaluate",
+      "--threads",
+      "8"
+    ]
+  },
+  "timer_semantics": {
+    "rf_training_seconds": "Recorded fold timer includes RF fitting and joblib serialization.",
+    "gru_training_seconds": "Recorded fold timer includes GRU fitting, torch save and adjacent model-file hashing.",
+    "wall_seconds": "Launcher start to successful figure finalization; not a pure GPU-kernel benchmark."
+  },
+  "rf": {
+    "n_models": 54,
+    "training_seconds_sum": 926.6425189000147,
+    "training_seconds_min": 11.95532579999417,
+    "training_seconds_max": 23.64526889999979,
+    "training_seconds_mean": 17.160046646296568,
+    "training_seconds_median": 15.999418400002469,
+    "cache_bytes_total": 13437066023,
+    "cache_bytes_min": 207389735,
+    "cache_bytes_max": 255869005
+  },
+  "gru": {
+    "n_models": 54,
+    "training_seconds_sum": 2222.5143554000388,
+    "training_seconds_min": 32.95736200000101,
+    "training_seconds_max": 283.30331529999967,
+    "training_seconds_mean": 41.15767324814887,
+    "training_seconds_median": 36.48208930000692,
+    "cache_bytes_total": 6310494,
+    "cache_bytes_min": 116861,
+    "cache_bytes_max": 116861
+  },
+  "model_cache_total_bytes": 13443376517,
+  "model_cache_total_GiB": 12.520120029337704,
+  "recorded_training_seconds_sum": 3149.1568743000535,
+  "wall_minus_recorded_training_seconds": 5022.3896916999465,
+  "publication_note": "Copied from the completed archived A runtime summary. Local process ID and absolute environment paths were omitted; times, versions, hardware, run identity and model statistics are unchanged. This is not a new experiment."
+}

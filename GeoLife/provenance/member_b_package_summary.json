@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "created_at_local": "2026-11-15T00:19:10+08:00",
+  "run_sha256": "04d2f3dee1b64ac6e6d359b0aae75128a001a8cd25ac2f4df9afce4a389a1d50",
+  "archives": [
+    {
+      "path": "交接包/GeoLife_MemberB_Core_20261115.zip",
+      "size_bytes": 75737056,
+      "sha256": "fbf01a1f852c2c5720510f1ca627c7a3f8f6a5d31325439487a2d28ee47fd0c3",
+      "payload_files": 540,
+      "verification": "all_entry_SHA256_size_and_ZIP_CRC_passed"
+    },
+    {
+      "path": "交接包/GeoLife_MemberB_RF_20261115.zip",
+      "size_bytes": 11918703416,
+      "sha256": "1793fb679e07360a5a0f6804c8c1d4f734cc474f685ac54f7f97aaeeaa1f8385",
+      "payload_files": 48,
+      "verification": "all_entry_SHA256_size_and_ZIP_CRC_passed"
+    }
+  ],
+  "package_manifest_sha256": "64786ac29b1a9328c87bca645d90019471327014e1289e9f2abdb41743692d76",
+  "expected": {
+    "n_reference": 90120,
+    "n_common": 71941,
+    "n_common_users": 48,
+    "n_folds": 54,
+    "n_packaged_rf_models": 48
+  },
+  "source_user_report_preserved": "现实关联/报告.md",
+  "isolated_relocation_test": {
+    "status": "passed",
+    "core_only_check_passed": true,
+    "all_files_and_smoke": {
+      "status": "passed",
+      "mode": "all",
+      "run_sha256": "04d2f3dee1b64ac6e6d359b0aae75128a001a8cd25ac2f4df9afce4a389a1d50",
+      "verified": {
+        "files": 588,
+        "bytes": 12044906729
+      },
+      "manifest_counts": {
+        "n_reference": 90120,
+        "n_common": 71941,
+        "n_common_users": 48,
+        "n_folds": 54,
+        "n_packaged_rf_models": 48
+      },
+      "missing_model_paths": [],
+      "smoke": {
+        "actual_counts": {
+          "n_reference": 90120,
+          "n_common": 71941,
+          "n_common_users": 48,
+          "n_folds": 54
+        },
+        "test_user": "010",
+        "n_windows_per_condition": 128,
+        "conditions": [
+          {
+            "condition": "ds0_n0",
+            "n_windows": 128,
+            "exact_rf_prediction_match": true
+          },
+          {
+            "condition": "ds10_n0",
+            "n_windows": 128,
+            "exact_rf_prediction_match": true
+          },
+          {
+            "condition": "ds0_n20",
+            "n_windows": 128,
+            "exact_rf_prediction_match": true
+          },
+          {
+            "condition": "ds10_n20",
+            "n_windows": 128,
+            "exact_rf_prediction_match": true
+          }
+        ],
+        "torch_imported_by_smoke": false,
+        "environment": {
+          "numpy": "2.4.4",
+          "pandas": "3.0.2",
+          "sklearn": "1.8.0",
+          "PyYAML": "6.0.3",
+          "joblib": "1.5.3"
+        }
+      }
+    },
+    "original_workspace_caches_not_used": true
+  }
+}
