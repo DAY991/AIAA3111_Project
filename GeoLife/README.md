@@ -23,8 +23,15 @@ docs/
   Proposal.docx                    Submitted research proposal
   完整优化方案与分工.md              Frozen experiment plan and A/B responsibilities
   member_a_report.md               A's final grid report
+  reproduction.md                  Data preparation, fresh A runs and archived B inputs
+  report_draft.pdf                 Supplied PDF draft; corrections remain pending
+  report_review_notes.md           Checklist for that unchanged PDF
   historical/                     Early EDA, pilot, 3-user baseline, and progress notes
 project/research/                 Frozen data, feature, model, and protocol code
+project/scripts/                  Raw-data preparation, A evaluation, summary and figures
+project/tests/                    Synthetic parser and paired-protocol regression tests
+tools/run_member_a.py              Portable A launcher using the current Python environment
+tools/verify_member_a.py           Independent full-data archive verification
 tools/member_b_bootstrap.py       B's CPU-only import helper
 现实关联/
   degradation_config.yaml         Frozen experiment settings
@@ -35,14 +42,28 @@ member_b/
   outputs/                       B's aggregate CSV tables, evidence, and report section
 provenance/member_b_master_manifest.json
 requirements.txt                 Locked CPU dependencies for B analysis
-.gitignore                       Excludes data, model weights, caches, and environments
+requirements-member-a.txt          A training and plotting dependencies
+../.gitignore                    Excludes data, model weights, caches, and environments
 ```
 
 The A output folder includes `grid_primary_common.csv` (primary paired comparison), `grid_primary_condition.csv` (each condition's surviving windows), `grid_results.csv` (full grid), `per_class_robustness.csv`, coverage tables, the key-seed summary, interaction contrasts, figures, and verification JSON. B outputs include 68 feature-drift rows, 24 group-drift rows, 240 permutation-repeat rows, 24 permutation summaries, 12 scenario mappings, and a three-paper evidence table. The repository manifest embeds B's original input and fold-model hashes and hashes the packaged small B outputs. A's handoff JSON records the original run identity and hashes of large local inputs, which are intentionally absent here.
 
 ## Reproduction and data availability
 
-Install the [locked CPU requirements](requirements.txt) in a Python 3.12 virtual environment for B analysis. The scripts rely on the shared code in `project/research/`. **The published small tables and figures can be inspected immediately; full retraining or B recomputation requires the separately held GeoLife source data, reference-window artifacts, and fold-specific RF models.** Those large files are not in this repository. The B scripts use repository-relative paths and write temporary fold caches beneath `work/`, which `.gitignore` excludes. The A full GPU training entry point and GRU weights are also not part of this compact handoff; use the saved A result and verification records rather than claiming this repository alone reruns the complete training experiment.
+See the [reproduction guide](docs/reproduction.md) for a Python 3.12 environment, the original GeoLife source, exact artifact locations, and commands. Use [requirements.txt](requirements.txt) for CPU-only B work, or [requirements-member-a.txt](requirements-member-a.txt) for A training/plots after selecting a CPU or CUDA PyTorch wheel. **The published aggregate results are available immediately; full-data computation still requires the source data or compatible handoff artifacts, which are not Git files.** This update adds the missing A preparation, training, evaluation, verification, plotting and test entry points. It does not claim that a new full 54-fold experiment was run during publication.
+
+From this `GeoLife/` directory, the full-data A route is:
+
+```powershell
+python project/scripts/prepare_geolife.py --raw-root 'D:\datasets\Geolife Trajectories 1.3\Data'
+python tools/run_member_a.py --mode prepare --output-dir work/reproduced_a
+python tools/run_member_a.py --mode evaluate --threads 8 --output-dir work/reproduced_a --finalize-figures
+python project/scripts/make_deployment_figures.py --input-dir work/reproduced_a
+python tools/verify_member_a.py --input-dir work/reproduced_a
+python project/scripts/summarize_member_a.py --input-dir work/reproduced_a
+```
+
+The data script creates its output directory and refuses unrequested overwrites. Fresh A outputs are kept under ignored `work/reproduced_a/` instead of replacing archived tables. A fresh environment can create a new run identity. The preserved B permutation script deliberately binds to the original A run and its RF receipts; read the guide before attempting B recomputation against newly trained models. Original large handoff ZIPs and their checksums are described in `provenance/member_b_package_summary.json`.
 
 The original GeoLife dataset should be obtained from its authorized source under its applicable terms. Do not commit raw `.plt` trajectories, the processed `points.csv`, `reference_manifest.csv`, `windows.npz`, `support.npz`, `rf.joblib`, `gru.pt`, compressed per-window prediction CSVs, the local Python environment, or the original handoff directories. These files are large and can contain sensitive location traces or derived individual movement records. `.gitignore` is a guard; **inspect `git status` before every push**. Keep large private artifacts in a controlled local or institution-approved location. If access to them is required for assessment, arrange it through the course's approved channel rather than GitHub.
 
@@ -56,4 +77,4 @@ The [proposal](docs/Proposal.docx), experiment plan, source code, aggregate data
 
 1. Review `docs/Proposal.docx` and the reports for participant names or other details the group does not wish to publish.
 2. Run `git status --short` and inspect staged files; verify that no raw data, model weights, per-window caches, or local environment folders appear.
-3. Add the final `Report.pdf` and `Poster.pdf` only after they are complete and checked against the aggregate tables. Neither is currently included.
+3. The supplied report snapshot is included as [docs/report_draft.pdf](docs/report_draft.pdf), with [pending review notes](docs/report_review_notes.md). It has not been revised by this upload. Replace it with a checked final report deliberately; a final `Poster.pdf` is not included.

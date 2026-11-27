@@ -1,0 +1,27 @@
+# Rebuildable trajectories, feature arrays, model weights and individual predictions
+GeoLife/project/data/
+GeoLife/project/artifacts/
+GeoLife/现实关联/artifacts/
+GeoLife/work/
+GeoLife/project/.libs/
+GeoLife/project/.gpu-libs*/
+GeoLife/.member_b_libs/
+**/__pycache__/
+**/.pytest_cache/
+**/.venv*/
+*.py[cod]
+*.pt
+*.pth
+*.joblib
+*.pkl
+*.csv.gz
+*.csv.gz.json
+*.zip
+*.7z
+*.part
+*.log
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
