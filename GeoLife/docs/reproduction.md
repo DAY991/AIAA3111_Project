@@ -134,8 +134,6 @@ The supplied B scripts intentionally refer to the archived A run and the publish
 
 Their working caches are under ignored `work/`. Do not reuse them across run identities. Applying B to a fresh A run requires explicitly selecting the new models/inventory and new baseline/output paths in a separate analysis; do not silently relabel new models as the archived RUN or overwrite the published B evidence. The original B scripts and provenance remain unchanged in this upload.
 
-## 7. Files intentionally excluded and report status
+## 7. Files intentionally excluded
 
 Git contains code, tests, locked requirements, aggregate results, figures and provenance. It excludes raw trajectories, `points.csv`, packed individual windows, installed dependencies, model weights, per-window predictions and large ZIPs. A model ZIP is over GitHub's ordinary file limit; upload of source code does not imply upload of those artifacts.
-
-`docs/report_draft.pdf` is the supplied report snapshot, unchanged. See `docs/report_review_notes.md` for pending factual, presentation and length corrections. This branch supplies missing reproduction files; it does not claim that the PDF was revised or that new model results were generated.

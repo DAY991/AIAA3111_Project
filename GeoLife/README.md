@@ -24,8 +24,6 @@ docs/
   完整优化方案与分工.md              Frozen experiment plan and A/B responsibilities
   member_a_report.md               A's final grid report
   reproduction.md                  Data preparation, fresh A runs and archived B inputs
-  report_draft.pdf                 Supplied PDF draft; corrections remain pending
-  report_review_notes.md           Checklist for that unchanged PDF
   historical/                     Early EDA, pilot, 3-user baseline, and progress notes
 project/research/                 Frozen data, feature, model, and protocol code
 project/scripts/                  Raw-data preparation, A evaluation, summary and figures
@@ -77,4 +75,4 @@ The [proposal](docs/Proposal.docx), experiment plan, source code, aggregate data
 
 1. Review `docs/Proposal.docx` and the reports for participant names or other details the group does not wish to publish.
 2. Run `git status --short` and inspect staged files; verify that no raw data, model weights, per-window caches, or local environment folders appear.
-3. The supplied report snapshot is included as [docs/report_draft.pdf](docs/report_draft.pdf), with [pending review notes](docs/report_review_notes.md). It has not been revised by this upload. Replace it with a checked final report deliberately; a final `Poster.pdf` is not included.
+3. Add the final report and poster only after they are complete and checked against the aggregate tables.

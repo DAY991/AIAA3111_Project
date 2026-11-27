@@ -25,3 +25,5 @@ GeoLife/.member_b_libs/
 !.env.example
 .DS_Store
 Thumbs.db
+GeoLife/docs/report_draft.pdf
+GeoLife/docs/report_review_notes.md
